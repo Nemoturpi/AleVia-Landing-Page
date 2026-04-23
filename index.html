@@ -507,92 +507,154 @@
     font-weight: 300;
   }
 
-  /* ========== NICOLE ========== */
-  .nicole { background: var(--navy-deep); }
-  .nicole-inner {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 80px;
-    align-items: center;
-  }
-  .nicole-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--gold-text);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 20px;
-  }
-  .nicole-eyebrow::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
-  .nicole-intro {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(18px, 2vw, 24px);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 28px;
-    border-left: 2px solid var(--gold);
-    padding-left: 24px;
-  }
-  .nicole-bio {
-    font-size: 15.5px;
-    color: var(--text-body);
-    line-height: 1.8;
-    margin-bottom: 32px;
-    font-weight: 300;
-  }
-  .nicole-name {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 4px;
-  }
-  .nicole-role {
-    font-size: 13px;
-    color: var(--gold-text);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-  .nicole-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .nicole-bullets li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 13.5px;
-    color: var(--text-muted);
-    font-weight: 300;
-  }
-  .nicole-bullets li::before {
-    content: '◆';
-    color: var(--gold);
-    font-size: 8px;
-    margin-top: 5px;
-    flex-shrink: 0;
-  }
+/* ========== NICOLE / EDITORIAL FEATURE ========== */
+.nicole {
+  background: var(--white);
+  padding: 120px 40px;
+}
+
+.nicole-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 96px;
+  align-items: start;
+}
+
 .nicole-photo-wrap {
   position: relative;
 }
+
 .nicole-photo-frame {
-  position: relative;
+  background: var(--off-white);
+  padding: 18px;
 }
 
 .nicole-photo-frame img {
   width: 100%;
   height: auto;
   display: block;
-  filter: grayscale(8%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: none;
+}
+
+.nicole-content {
+  max-width: 720px;
+}
+
+.nicole-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-text);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.nicole-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.nicole-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.nicole-role {
+  font-size: 12px;
+  color: var(--gold-text);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+  font-weight: 500;
+}
+
+.nicole-manifesto {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--navy);
+  max-width: 680px;
+  margin-bottom: 30px;
+}
+
+.nicole-bio {
+  font-size: 15.5px;
+  color: var(--text-body);
+  line-height: 1.85;
+  font-weight: 300;
+  max-width: 640px;
+  margin-bottom: 42px;
+}
+
+.nicole-credentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 760px;
+}
+
+.nicole-proof {
+  padding-top: 18px;
+  border-top: 1px solid var(--warm-gray);
+}
+
+.nicole-proof-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.nicole-proof-text {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.nicole-note {
+  margin-top: 26px;
+  font-size: 12.5px;
+  color: var(--gold-text);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .nicole {
+    padding: 88px 24px;
+  }
+
+  .nicole-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .nicole-photo-wrap {
+    max-width: 420px;
+  }
+
+  .nicole-credentials {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
   /* ========== SERVICES ========== */
   .services { background: var(--navy-deep); position: relative; overflow: hidden; }
@@ -1127,48 +1189,68 @@
     </div>
   </section>
 
-  <!-- Nicole -->
-  <section class="nicole" id="equipe" aria-labelledby="nicole-title">
-    <div class="section-inner">
-      <div class="nicole-inner">
-        <div class="fade-in">
-          <p class="nicole-eyebrow">La fondatrice</p>
-          <h2 class="section-title" id="nicole-title" style="margin-bottom:28px">Nicole Tortello Duban</h2>
-          <p class="nicole-intro">
-            AleVia est le seul cabinet fondé par une avocate, une journaliste et une déléguée générale.<br>
-            Trois regards que la plupart de vos adversaires n'ont pas.
-          </p>
-          <p class="nicole-bio">
-            Journaliste, avocate, déléguée générale, formée en intelligence économique à l'IHEDN —
-            cette trajectoire croisée lui donne quelque chose de rare : la capacité à lire simultanément
-            les dynamiques institutionnelles, médiatiques, juridiques et stratégiques d'une situation,
-            et à les transformer en levier d'influence pour ses clients.
-            Pour chaque mission, elle constitue une équipe dédiée : juristes, experts sectoriels,
-            chercheurs et spécialistes en politiques publiques.
-          </p>
-          <p class="nicole-name">Nicole Tortello Duban</p>
-          <p class="nicole-role">Présidente & fondatrice, AleVia Conseil</p>
-          <ul class="nicole-bullets">
-            <li>Ancienne avocate au barreau de Paris</li>
-            <li>Journaliste de formation, ex-rédactrice spécialisée</li>
-            <li>Ancienne déléguée générale d'organisation professionnelle</li>
-            <li>Formée en intelligence économique à l'IHEDN — 56e cycle Intelligence Économique et Stratégique</li>
-            <li>Lecture civilo-militaire des enjeux stratégiques</li>
-            <li>Titulaire du CAPA et d'un certificat de spécialisation Union Européenne (CNAM)</li>
-          </ul>
-        </div>
-        <div class="fade-in fade-in-delay-2">
-          <div class="nicole-photo-wrap">
-            <div class="nicole-photo-frame">
-              <img src="uploads/alevia-team-nicole-800x800-1-380x380.png"
-                   alt="Portrait de Nicole Tortello Duban, présidente d'AleVia Conseil"
-                   width="380" height="380">
-            </div>
-          </div>
+<section class="nicole" id="equipe" aria-labelledby="nicole-title">
+  <div class="section-inner">
+    <div class="nicole-inner">
+      <div class="nicole-photo-wrap fade-in fade-in-delay-1">
+        <div class="nicole-photo-frame">
+          <img src="uploads/alevia-team-nicole-800x800-1-380x380.png"
+               alt="Portrait de Nicole Tortello Duban, présidente d'AleVia Conseil"
+               width="380" height="475">
         </div>
       </div>
+
+      <div class="nicole-content fade-in fade-in-delay-2">
+        <p class="nicole-eyebrow">La fondatrice</p>
+
+        <h2 class="nicole-name" id="nicole-title">Nicole Tortello Duban</h2>
+        <p class="nicole-role">Présidente & fondatrice, AleVia Conseil</p>
+
+        <p class="nicole-manifesto">
+          Avocate, journaliste, déléguée générale&nbsp;: trois métiers exercés de l’intérieur
+          pour construire des stratégies d’influence qui tiennent dans la vraie vie.
+        </p>
+
+        <p class="nicole-bio">
+          Nicole Tortello Duban accompagne des fédérations, associations et opérateurs confrontés
+          à des séquences institutionnelles complexes dans les secteurs de la santé, du médico-social
+          et du One Health. Son parcours à la croisée du droit, des médias et de la représentation
+          sectorielle lui permet de lire simultanément les dynamiques juridiques, politiques,
+          réputationnelles et stratégiques d’une situation, puis de les transformer en leviers
+          d’influence concrets pour ses clients.
+        </p>
+
+        <div class="nicole-credentials" aria-label="Éléments de parcours">
+          <div class="nicole-proof">
+            <h3 class="nicole-proof-title">Avocate</h3>
+            <p class="nicole-proof-text">
+              Ancienne avocate au barreau de Paris, titulaire du CAPA.
+            </p>
+          </div>
+
+          <div class="nicole-proof">
+            <h3 class="nicole-proof-title">Journaliste</h3>
+            <p class="nicole-proof-text">
+              Journaliste de formation, ancienne rédactrice spécialisée.
+            </p>
+          </div>
+
+          <div class="nicole-proof">
+            <h3 class="nicole-proof-title">Déléguée générale</h3>
+            <p class="nicole-proof-text">
+              Ancienne déléguée générale d’organisation professionnelle, au contact direct
+              des arbitrages sectoriels et institutionnels.
+            </p>
+          </div>
+        </div>
+
+        <p class="nicole-note">
+          Formation en intelligence économique à l’IHEDN — 56e cycle Intelligence Économique et Stratégique.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Services -->
   <section class="services" id="services" aria-labelledby="services-title">
