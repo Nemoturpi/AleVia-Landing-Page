@@ -431,8 +431,11 @@
   }
 
   /* ========== SECTORS ========== */
-  .sectors { background: var(--white); border-top: 1px solid var(--warm-gray); }
-  .sectors-header { margin-bottom: 40px; }
+.sectors {
+  background: var(--off-white);
+  border-top: 1px solid var(--warm-gray);
+  border-bottom: 1px solid var(--warm-gray);
+}  .sectors-header { margin-bottom: 40px; }
   .sectors-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1036,10 +1039,10 @@
       <circle cx="275" cy="260" r="90" fill="none" stroke="#b8975a" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-5"/>
       <circle cx="275" cy="260" r="70" fill="none" stroke="#b8975a" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-6"/>
 
-      <!-- Points proches des labels -->
-      <circle cx="210" cy="52"  r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>
-      <circle cx="58"  cy="355" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>
-      <circle cx="362" cy="355" r="2.5" fill="#b8975a" class="oh-fade oh-delay-7"/>
+<!-- Points sur les cercles, côté labels -->
+<circle cx="210" cy="60"  r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>   <!-- sommet du cercle Humain -->
+<circle cx="65"  cy="305" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>   <!-- bord gauche du cercle Animal -->
+<circle cx="355" cy="305" r="2.5" fill="#b8975a" class="oh-fade oh-delay-7"/>   <!-- bord droit du cercle Environnement -->
 
       <!-- Centre convergence -->
       <circle cx="210" cy="223" r="10"  fill="none" stroke="#b8975a" stroke-width="1" class="oh-pulse oh-delay-7"/>
