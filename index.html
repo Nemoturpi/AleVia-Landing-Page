@@ -1004,89 +1004,74 @@
 <main id="main-content">
 
   <!-- Hero -->
-  <section class="hero" aria-label="Introduction">
-    <div class="hero-onehealth" aria-hidden="true">
-      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg "overflow="hidden">
-        <defs>
-          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#b8975a" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#b8975a" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        
-        <!-- Connecting lines from center -->
-        <g class="oh-lines">
-          <line x1="210" y1="210" x2="210" y2="130" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
-          <line x1="210" y1="210" x2="140" y2="280" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
-          <line x1="210" y1="210" x2="280" y2="280" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
-        </g>
-        
-        <!-- Center glow -->
-        <circle cx="210" cy="210" r="50" fill="url(#centerGlow)" class="oh-pulse"/>
-        
-        <!-- Circle 1 - Human Health - Crimson -->
-        <circle cx="210" cy="150" r="90" fill="none" stroke="#9b1e1e" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-1"/>
-        <circle cx="210" cy="150" r="70" fill="none" stroke="#9b1e1e" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-2"/>
-        
-        <!-- Circle 2 - Animal Health - Navy -->
-        <circle cx="145" cy="260" r="90" fill="none" stroke="#2a3848" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-3"/>
-        <circle cx="145" cy="260" r="70" fill="none" stroke="#2a3848" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-4"/>
-        
-        <!-- Circle 3 - Environment - Gold -->
-        <circle cx="275" cy="260" r="90" fill="none" stroke="#b8975a" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-5"/>
-        <circle cx="275" cy="260" r="70" fill="none" stroke="#b8975a" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-6"/>
-        
-<!-- Points proches des labels, pas dans les cercles -->
-<circle cx="210" cy="52" r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>
-<circle cx="58" cy="355" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>
-<circle cx="362" cy="355" r="2.5" fill="#b8975a" class="oh-fade oh-delay-7"/>
+<section class="hero" aria-label="Introduction">
+  <div class="hero-onehealth" aria-hidden="true">
+    <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#b8975a" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#b8975a" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
 
-<!-- Centre convergence -->
-<circle cx="210" cy="223" r="10" fill="none" stroke="#b8975a" stroke-width="1" class="oh-pulse oh-delay-7"/>
-<circle cx="210" cy="223" r="3.5" fill="#b8975a" class="oh-fade oh-delay-8"/>
-        
-        <!-- Labels -->
-        <text x="210" y="40" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#9b1e1e" class="oh-fade oh-delay-3">Humain</text>
-        <text x="60" y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#2a3848" class="oh-fade oh-delay-5">Animal</text>
-        <text x="360" y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#b8975a" class="oh-fade oh-delay-7">Environnement</text>
-<text x="210" y="375" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="13" font-weight="400" letter-spacing="0.25em" fill="#2a3848" opacity="0.6" class="oh-fade oh-delay-8">ONE HEALTH</text>
-        <div class="hero-content">
-      <p class="hero-eyebrow">Le seul cabinet d'affaires publiques français spécialisé dans le One Health.</p>
-      <h1>
-        One Health a besoin<br>d'une voix.<br>
-        <em>AleVia la construit.</em>
-      </h1>
-      <p class="hero-sub">
-        AleVia Conseil accompagne fédérations, syndicats et opérateurs du secteur santé et médico-social dans leur stratégie d'influence auprès des décideurs publics.
-      </p>
-      <a href="#contact" class="hero-cta">Prendre rendez-vous avec Nicole</a>
-    </div>
-    <div class="hero-scroll" aria-hidden="true"><div class="scroll-line"></div></div>
-  </section>
+      <!-- Connecting lines from center -->
+      <g class="oh-lines">
+        <line x1="210" y1="210" x2="210" y2="130" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+        <line x1="210" y1="210" x2="140" y2="280" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+        <line x1="210" y1="210" x2="280" y2="280" stroke="#b8975a" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4"/>
+      </g>
 
-  <!-- Victoires récentes -->
-  <section class="wins" aria-labelledby="wins-title">
-    <div class="section-inner">
-      <header class="wins-header fade-in">
-        <p class="section-eyebrow">Actions récentes</p>
-        <h2 class="section-title" id="wins-title">Ce que nous avons obtenu</h2>
-      </header>
-      <div class="wins-grid">
-        <div class="win-card fade-in fade-in-delay-1">
-          <div class="win-badge"><span class="win-badge-icon" aria-hidden="true">🏛️</span> Sénat</div>
-          <p class="win-date">Octobre 2025</p>
-          <h3 class="win-title">Table ronde sur les thérapies non médicamenteuses</h3>
-          <p class="win-sub">Avec la sénatrice Laurence Rossignol comme marraine</p>
-        </div>
-        <div class="win-card fade-in fade-in-delay-2">
-          <div class="win-badge"><span class="win-badge-icon" aria-hidden="true">🚑</span> Plaidoyer</div>
-          <p class="win-date">2024</p>
-          <h3 class="win-title">Revalorisation du secteur ambulancier</h3>
-        </div>
-      </div>
-      <a href="#contact" class="wins-more fade-in">Voir toutes nos actions →</a>
-    </div>
-  </section>
+      <!-- Center glow -->
+      <circle cx="210" cy="210" r="50" fill="url(#centerGlow)" class="oh-pulse"/>
+
+      <!-- Circle 1 - Human Health - Crimson -->
+      <circle cx="210" cy="150" r="90" fill="none" stroke="#9b1e1e" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-1"/>
+      <circle cx="210" cy="150" r="70" fill="none" stroke="#9b1e1e" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-2"/>
+
+      <!-- Circle 2 - Animal Health - Navy -->
+      <circle cx="145" cy="260" r="90" fill="none" stroke="#2a3848" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-3"/>
+      <circle cx="145" cy="260" r="70" fill="none" stroke="#2a3848" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-4"/>
+
+      <!-- Circle 3 - Environment - Gold -->
+      <circle cx="275" cy="260" r="90" fill="none" stroke="#b8975a" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-5"/>
+      <circle cx="275" cy="260" r="70" fill="none" stroke="#b8975a" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-6"/>
+
+      <!-- Points proches des labels -->
+      <circle cx="210" cy="52"  r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>
+      <circle cx="58"  cy="355" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>
+      <circle cx="362" cy="355" r="2.5" fill="#b8975a" class="oh-fade oh-delay-7"/>
+
+      <!-- Centre convergence -->
+      <circle cx="210" cy="223" r="10"  fill="none" stroke="#b8975a" stroke-width="1" class="oh-pulse oh-delay-7"/>
+      <circle cx="210" cy="223" r="3.5" fill="#b8975a" class="oh-fade oh-delay-8"/>
+
+      <!-- Labels -->
+      <text x="210" y="40"  text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#9b1e1e" class="oh-fade oh-delay-3">Humain</text>
+      <text x="60"  y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#2a3848" class="oh-fade oh-delay-5">Animal</text>
+      <text x="360" y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#b8975a" class="oh-fade oh-delay-7">Environnement</text>
+
+      <!-- ONE HEALTH sous le diagramme -->
+      <text x="210" y="375" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="13" font-weight="400" letter-spacing="0.25em" fill="#2a3848" opacity="0.6" class="oh-fade oh-delay-8">ONE HEALTH</text>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Le seul cabinet d'affaires publiques français spécialisé dans le One Health.</p>
+    <h1>
+      One Health a besoin<br>d'une voix.<br>
+      <em>AleVia la construit.</em>
+    </h1>
+    <p class="hero-sub">
+      AleVia Conseil accompagne fédérations, syndicats et opérateurs du secteur santé et médico-social
+      dans leur stratégie d'influence auprès des décideurs publics.
+    </p>
+    <a href="#contact" class="hero-cta">Prendre rendez-vous avec Nicole</a>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
   <!-- Secteurs -->
   <section class="sectors" id="secteurs" aria-labelledby="sectors-title">
