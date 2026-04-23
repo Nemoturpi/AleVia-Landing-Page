@@ -325,13 +325,49 @@
     text-decoration: none;
     display: inline-block;
   }
-  .hero-cta:hover { background: #7d1818; transform: translateY(-2px); }
-  .hero-scroll {
-    position: absolute;
-    bottom: 36px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.hero-cta:hover { background: #7d1818; transform: translateY(-2px); }
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-link-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s, transform 0.15s;
+}
+
+.hero-link-secondary::after {
+  content: '→';
+  color: var(--gold-text);
+  transition: transform 0.15s;
+}
+
+.hero-link-secondary:hover {
+  color: var(--crimson);
+  transform: translateY(-1px);
+}
+
+.hero-link-secondary:hover::after {
+  transform: translateX(2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
   .scroll-line {
     width: 1px;
     height: 40px;
@@ -667,12 +703,29 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(247,244,239,0.98) 0%, rgba(247,244,239,0.98) 68%, rgba(247,244,239,0.86) 82%, rgba(247,244,239,0.72) 100%),
-    url('uploads/paris-architecture.png') right center / cover no-repeat;
+    linear-gradient(
+      to right,
+      rgba(247,244,239,0.98) 0%,
+      rgba(247,244,239,0.97) 52%,
+      rgba(247,244,239,0.90) 72%,
+      rgba(247,244,239,0.78) 100%
+    ),
+    url('uploads/parlement-institution.jpg') right center / cover no-repeat;
   pointer-events: none;
-  opacity: 1;
 }
 
+  .services::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02) 0%,
+    rgba(255,255,255,0.08) 100%
+  );
+  pointer-events: none;
+}
+  
 .services .section-inner {
   position: relative;
   z-index: 1;
@@ -1303,18 +1356,21 @@
       fill="#2a3848" opacity="0.6" class="oh-fade oh-delay-8">ONE HEALTH</text>    </svg>
   </div>
 
-  <div class="hero-content">
-    <p class="hero-eyebrow">Le seul cabinet d'affaires publiques français spécialisé dans le One Health.</p>
-    <h1>
-      One Health a besoin<br>d'une voix.<br>
-      <em>AleVia la construit.</em>
-    </h1>
-    <p class="hero-sub">
-      AleVia Conseil accompagne fédérations, syndicats et opérateurs du secteur santé et médico-social
-      dans leur stratégie d'influence auprès des décideurs publics.
-    </p>
+<div class="hero-content">
+  <p class="hero-eyebrow">Le seul cabinet d'affaires publiques français spécialisé dans le One Health.</p>
+  <h1>
+    One Health a besoin<br>d'une voix.<br>
+    <em>AleVia la construit.</em>
+  </h1>
+  <p class="hero-sub">
+    AleVia Conseil accompagne fédérations, syndicats et opérateurs du secteur santé et médico-social
+    dans leur stratégie d'influence auprès des décideurs publics.
+  </p>
+  <div class="hero-actions">
     <a href="#contact" class="hero-cta">Prendre rendez-vous avec Nicole</a>
+    <a href="#services" class="hero-link-secondary">Découvrir notre approche</a>
   </div>
+</div>
 
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
