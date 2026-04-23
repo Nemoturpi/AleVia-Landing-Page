@@ -205,15 +205,16 @@
     width: 4px;
     background: var(--crimson);
   }
-  .hero-onehealth {
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 420px;
-    height: 420px;
-    pointer-events: none;
-  }
+.hero-onehealth {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: 380px;
+  pointer-events: none;
+  margin-right: calc((100vw - 1200px) / 2);
+}
   .hero-onehealth svg { width: 100%; height: 100%; }
   
   /* Circle draw animation */
@@ -575,46 +576,17 @@
   }
 .nicole-photo-wrap {
   position: relative;
-  display: inline-block;
-  padding: 16px 16px 0 0;
 }
-  .nicole-photo-frame { position: relative; }
 .nicole-photo-frame {
   position: relative;
-  z-index: 1;
 }
 
-.nicole-photo-frame::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  right: -16px;
+.nicole-photo-frame img {
   width: 100%;
-  height: 100%;
-  border: 1px solid var(--gold);
-  opacity: 0.4;
-  z-index: -1;
+  height: auto;
+  display: block;
+  filter: grayscale(8%);
 }
-  .nicole-photo-frame img {
-    width: 100%; height: auto;
-    display: block;
-    filter: grayscale(8%);
-  }
-.nicole-av-bg {
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-  font-family: Cormorant Garamond, Georgia, serif;
-  font-size: 160px;
-  font-weight: 300;
-  color: var(--gold);
-  opacity: 0.06;
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
-
   /* ========== SERVICES ========== */
   .services { background: var(--navy-deep); position: relative; overflow: hidden; }
   .services::before {
@@ -1172,7 +1144,6 @@
         </div>
         <div class="fade-in fade-in-delay-2">
           <div class="nicole-photo-wrap">
-            <div class="nicole-av-bg" aria-hidden="true">AV</div>
             <div class="nicole-photo-frame">
               <img src="uploads/alevia-team-nicole-800x800-1-380x380.png"
                    alt="Portrait de Nicole Tortello Duban, présidente d'AleVia Conseil"
