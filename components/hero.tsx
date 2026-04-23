@@ -75,58 +75,210 @@ export function Hero() {
 
 function OneHealthDiagram() {
   return (
-    <div className="animate-fade-in animation-delay-600 relative h-[400px] w-[400px]">
+    <div className="relative h-[420px] w-[420px]">
       <svg
-        viewBox="0 0 400 400"
+        viewBox="0 0 420 420"
         className="h-full w-full"
-        aria-label="Diagramme One Health représentant l'intersection de la santé humaine, animale et environnementale"
+        aria-label="Diagramme One Health representant l'intersection de la sante humaine, animale et environnementale"
       >
-        {/* Circle 1 - Top - Crimson */}
+        <defs>
+          {/* Gradient for center glow */}
+          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#b8975a" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#b8975a" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Subtle connecting lines from center to each circle */}
+        <g className="animate-draw-line animation-delay-1000">
+          <line
+            x1="210"
+            y1="210"
+            x2="210"
+            y2="130"
+            stroke="#b8975a"
+            strokeWidth="0.5"
+            strokeDasharray="4 4"
+            opacity="0.4"
+          />
+          <line
+            x1="210"
+            y1="210"
+            x2="140"
+            y2="280"
+            stroke="#b8975a"
+            strokeWidth="0.5"
+            strokeDasharray="4 4"
+            opacity="0.4"
+          />
+          <line
+            x1="210"
+            y1="210"
+            x2="280"
+            y2="280"
+            stroke="#b8975a"
+            strokeWidth="0.5"
+            strokeDasharray="4 4"
+            opacity="0.4"
+          />
+        </g>
+
+        {/* Center glow effect */}
         <circle
-          cx="200"
-          cy="140"
-          r="100"
+          cx="210"
+          cy="210"
+          r="50"
+          fill="url(#centerGlow)"
+          className="animate-pulse-slow"
+        />
+
+        {/* Circle 1 - Top - Crimson - Human Health */}
+        <circle
+          cx="210"
+          cy="150"
+          r="90"
           fill="none"
           stroke="#9b1e1e"
           strokeWidth="1"
-          opacity="0.25"
+          opacity="0.35"
+          className="animate-draw-circle"
+          style={{
+            strokeDasharray: "565",
+            strokeDashoffset: "565",
+          }}
+        />
+        {/* Inner decorative ring */}
+        <circle
+          cx="210"
+          cy="150"
+          r="70"
+          fill="none"
+          stroke="#9b1e1e"
+          strokeWidth="0.5"
+          opacity="0.15"
+          className="animate-draw-circle animation-delay-200"
+          style={{
+            strokeDasharray: "440",
+            strokeDashoffset: "440",
+          }}
         />
 
-        {/* Circle 2 - Bottom Left - Navy */}
+        {/* Circle 2 - Bottom Left - Navy - Animal Health */}
         <circle
-          cx="140"
-          cy="240"
-          r="100"
+          cx="145"
+          cy="260"
+          r="90"
           fill="none"
           stroke="#2a3848"
           strokeWidth="1"
-          opacity="0.25"
+          opacity="0.35"
+          className="animate-draw-circle animation-delay-400"
+          style={{
+            strokeDasharray: "565",
+            strokeDashoffset: "565",
+          }}
+        />
+        <circle
+          cx="145"
+          cy="260"
+          r="70"
+          fill="none"
+          stroke="#2a3848"
+          strokeWidth="0.5"
+          opacity="0.15"
+          className="animate-draw-circle animation-delay-600"
+          style={{
+            strokeDasharray: "440",
+            strokeDashoffset: "440",
+          }}
         />
 
-        {/* Circle 3 - Bottom Right - Gold */}
+        {/* Circle 3 - Bottom Right - Gold - Environment */}
         <circle
-          cx="260"
-          cy="240"
-          r="100"
+          cx="275"
+          cy="260"
+          r="90"
           fill="none"
           stroke="#b8975a"
           strokeWidth="1"
-          opacity="0.25"
+          opacity="0.35"
+          className="animate-draw-circle animation-delay-800"
+          style={{
+            strokeDasharray: "565",
+            strokeDashoffset: "565",
+          }}
+        />
+        <circle
+          cx="275"
+          cy="260"
+          r="70"
+          fill="none"
+          stroke="#b8975a"
+          strokeWidth="0.5"
+          opacity="0.15"
+          className="animate-draw-circle animation-delay-1000"
+          style={{
+            strokeDasharray: "440",
+            strokeDashoffset: "440",
+          }}
         />
 
-        {/* Gold dot at intersection center */}
-        <circle cx="200" cy="200" r="4" fill="#b8975a" />
+        {/* Small accent dots at circle tops */}
+        <circle
+          cx="210"
+          cy="60"
+          r="2"
+          fill="#9b1e1e"
+          className="animate-fade-in animation-delay-600"
+        />
+        <circle
+          cx="75"
+          cy="310"
+          r="2"
+          fill="#2a3848"
+          className="animate-fade-in animation-delay-1000"
+        />
+        <circle
+          cx="345"
+          cy="310"
+          r="2"
+          fill="#b8975a"
+          className="animate-fade-in animation-delay-1200"
+        />
+
+        {/* Center intersection - gold ring with pulse */}
+        <circle
+          cx="210"
+          cy="210"
+          r="12"
+          fill="none"
+          stroke="#b8975a"
+          strokeWidth="1"
+          className="animate-pulse-slow animation-delay-1200"
+        />
+        <circle
+          cx="210"
+          cy="210"
+          r="4"
+          fill="#b8975a"
+          className="animate-fade-in animation-delay-1400"
+        />
       </svg>
 
-      {/* Labels */}
-      <span className="absolute left-1/2 top-6 -translate-x-1/2 font-serif text-sm font-light italic text-navy/70">
-        Santé humaine
+      {/* Labels with refined positioning */}
+      <span className="animate-fade-in animation-delay-800 absolute left-1/2 top-2 -translate-x-1/2 font-serif text-[13px] font-light tracking-wide text-accent">
+        Humain
       </span>
-      <span className="absolute bottom-4 left-4 font-serif text-sm font-light italic text-navy/70">
-        Santé animale
+      <span className="animate-fade-in animation-delay-1000 absolute bottom-2 left-2 font-serif text-[13px] font-light tracking-wide text-navy">
+        Animal
       </span>
-      <span className="absolute bottom-4 right-4 font-serif text-sm font-light italic text-navy/70">
+      <span className="animate-fade-in animation-delay-1200 absolute bottom-2 right-2 font-serif text-[13px] font-light tracking-wide text-gold">
         Environnement
+      </span>
+
+      {/* "One Health" label at center */}
+      <span className="animate-fade-in animation-delay-1400 absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-8 font-serif text-[11px] font-light uppercase tracking-[0.2em] text-navy/50">
+        One Health
       </span>
     </div>
   );
