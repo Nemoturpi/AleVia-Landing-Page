@@ -71,6 +71,7 @@
     --navy: #2a3848;
     --navy-deep: #1c2733;
     --crimson: #9b1e1e;
+    --green-env: #4a7c59;      /* NEW pour Environnement */
     --gold: #b8975a;          /* décoratif : bordures, lignes, SVG */
     --gold-text: #7d6030;     /* textuel : ratio 5.8:1 sur blanc — WCAG AA */
     --gold-light: #d4b07a;
@@ -1027,39 +1028,48 @@
       <!-- Center glow -->
       <circle cx="210" cy="210" r="50" fill="url(#centerGlow)" class="oh-pulse"/>
 
-      <!-- Circle 1 - Human Health - Crimson -->
-      <circle cx="210" cy="150" r="90" fill="none" stroke="#9b1e1e" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-1"/>
-      <circle cx="210" cy="150" r="70" fill="none" stroke="#9b1e1e" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-2"/>
+<!-- Circle 1 - Humain (crimson) -->
+<circle cx="210" cy="150" r="90" fill="none" stroke="#9b1e1e" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-1"/>
+<circle cx="210" cy="150" r="70" fill="none" stroke="#9b1e1e" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-2"/>
 
-      <!-- Circle 2 - Animal Health - Navy -->
-      <circle cx="145" cy="260" r="90" fill="none" stroke="#2a3848" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-3"/>
-      <circle cx="145" cy="260" r="70" fill="none" stroke="#2a3848" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-4"/>
+<!-- Circle 2 - Animal (bleu pétrole) -->
+<circle cx="145" cy="260" r="90" fill="none" stroke="#2a3848" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-3"/>
+<circle cx="145" cy="260" r="70" fill="none" stroke="#2a3848" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-4"/>
 
-      <!-- Circle 3 - Environment - Gold -->
-      <circle cx="275" cy="260" r="90" fill="none" stroke="#b8975a" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-5"/>
-      <circle cx="275" cy="260" r="70" fill="none" stroke="#b8975a" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-6"/>
+<!-- Circle 3 - Environnement (vert) -->
+<circle cx="275" cy="260" r="90" fill="none" stroke="#4a7c59" stroke-width="1" opacity="0.35" class="oh-draw oh-delay-5"/>
+<circle cx="275" cy="260" r="70" fill="none" stroke="#4a7c59" stroke-width="0.5" opacity="0.15" class="oh-draw-inner oh-delay-6"/>
 
-<!-- Points sur les cercles, côté labels -->
-<circle cx="210" cy="60"  r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>   <!-- Humain -->
-
-<!-- pile sur le cercle Animal -->
-<circle cx="55"  cy="260" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>
-
-<!-- pile sur le cercle Environnement -->
-<circle cx="365" cy="260" r="2.5" fill="#b8975a" class="oh-fade oh-delay-7"/>
+<!-- Points sur les cercles, vers les labels -->
+<circle cx="210" cy="60"  r="2.5" fill="#9b1e1e" class="oh-fade oh-delay-3"/>  <!-- Humain -->
+<circle cx="67"  cy="338" r="2.5" fill="#2a3848" class="oh-fade oh-delay-5"/>  <!-- Animal -->
+<circle cx="353" cy="338" r="2.5" fill="#4a7c59" class="oh-fade oh-delay-7"/>  <!-- Environnement -->
 
       <!-- Centre convergence -->
       <circle cx="210" cy="223" r="10"  fill="none" stroke="#b8975a" stroke-width="1" class="oh-pulse oh-delay-7"/>
       <circle cx="210" cy="223" r="3.5" fill="#b8975a" class="oh-fade oh-delay-8"/>
 
       <!-- Labels -->
-      <text x="210" y="40"  text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#9b1e1e" class="oh-fade oh-delay-3">Humain</text>
-      <text x="60"  y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#2a3848" class="oh-fade oh-delay-5">Animal</text>
-      <text x="360" y="370" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="15" font-weight="300" letter-spacing="0.05em" fill="#b8975a" class="oh-fade oh-delay-7">Environnement</text>
+<text x="210" y="40"  text-anchor="middle"
+      font-family="Cormorant Garamond,Georgia,serif"
+      font-size="15" font-weight="300" letter-spacing="0.05em"
+      fill="#9b1e1e" class="oh-fade oh-delay-3">Humain</text>
+
+<text x="60"  y="370" text-anchor="middle"
+      font-family="Cormorant Garamond,Georgia,serif"
+      font-size="15" font-weight="300" letter-spacing="0.05em"
+      fill="#2a3848" class="oh-fade oh-delay-5">Animal</text>
+
+<text x="360" y="370" text-anchor="middle"
+      font-family="Cormorant Garamond,Georgia,serif"
+      font-size="15" font-weight="300" letter-spacing="0.05em"
+      fill="#4a7c59" class="oh-fade oh-delay-7">Environnement</text>
 
       <!-- ONE HEALTH sous le diagramme -->
-      <text x="210" y="375" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="13" font-weight="400" letter-spacing="0.25em" fill="#2a3848" opacity="0.6" class="oh-fade oh-delay-8">ONE HEALTH</text>
-    </svg>
+<text x="210" y="375" text-anchor="middle"
+      font-family="Cormorant Garamond,Georgia,serif"
+      font-size="13" font-weight="400" letter-spacing="0.25em"
+      fill="#2a3848" opacity="0.6" class="oh-fade oh-delay-8">ONE HEALTH</text>    </svg>
   </div>
 
   <div class="hero-content">
