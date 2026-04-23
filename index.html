@@ -207,12 +207,13 @@
   }
   .hero-onehealth {
     position: absolute;
-    right: 40px;
+    right: 10%;
     top: 50%;
     transform: translateY(-50%);
-    width: 420px;
-    height: 420px;
+    width: 380px;
+    height: 380px;
     pointer-events: none;
+    opacity: 0.12;
   }
   .hero-onehealth svg { width: 100%; height: 100%; }
   
@@ -264,6 +265,20 @@
     opacity: 0;
     animation: ohFadeIn 1s ease-out 1s forwards;
   }
+  
+  /* Hero text reveal animations */
+  @keyframes heroSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-reveal {
+    opacity: 0;
+    animation: heroSlideUp 0.8s ease-out forwards;
+  }
+  .hero-reveal-1 { animation-delay: 0.1s; }
+  .hero-reveal-2 { animation-delay: 0.3s; }
+  .hero-reveal-3 { animation-delay: 0.5s; }
+  .hero-reveal-4 { animation-delay: 0.7s; }
   .hero-content {
     position: relative;
     z-index: 2;
@@ -1065,15 +1080,15 @@
       </svg>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Une seule santé. Humaine, animale, environnementale.</p>
-      <h1>
+      <p class="hero-eyebrow hero-reveal hero-reveal-1">Cabinet français d'affaires publiques</p>
+      <h1 class="hero-reveal hero-reveal-2">
         One Health a besoin<br>d'une voix.<br>
         <em>AleVia la construit.</em>
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub hero-reveal hero-reveal-3">
         AleVia Conseil accompagne fédérations, syndicats et opérateurs du secteur santé et médico-social dans leur stratégie d'influence auprès des décideurs publics.
       </p>
-      <a href="#contact" class="hero-cta">Prendre rendez-vous avec Nicole</a>
+      <a href="#contact" class="hero-cta hero-reveal hero-reveal-4">Prendre rendez-vous avec Nicole</a>
     </div>
     <div class="hero-scroll" aria-hidden="true"><div class="scroll-line"></div></div>
   </section>
